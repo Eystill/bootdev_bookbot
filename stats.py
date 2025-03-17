@@ -11,8 +11,9 @@ def get_book_text_count():
     count_of_words = len(text_list)
     return(count_of_words)
 
+character_values = {}
+
 def character_count():
-    character_values = {}
     letter_counter = 0
     text_string = ""
 
@@ -209,5 +210,52 @@ def character_count():
                 letter_counter += 1
         
         character_values["z"] = letter_counter
+        letter_counter = 0
+
+        for letter in text_string.lower():
+            if letter == "æ":
+                letter_counter += 1
+        
+        character_values["æ"] = letter_counter
+        letter_counter = 0
+
+        for letter in text_string.lower():
+            if letter == "â":
+                letter_counter += 1
+        
+        character_values["â"] = letter_counter
+        letter_counter = 0
+
+        for letter in text_string.lower():
+            if letter == "ê":
+                letter_counter += 1
+        
+        character_values["ê"] = letter_counter
+        letter_counter = 0
+
+        for letter in text_string.lower():
+            if letter == "ë":
+                letter_counter += 1
+        
+        character_values["ë"] = letter_counter
+        letter_counter = 0
+
+        for letter in text_string.lower():
+            if letter == "ô":
+                letter_counter += 1
+        
+        character_values["ô"] = letter_counter        
     
     return(character_values)
+
+def sorting(character_values):
+    sorted_list = []
+    
+    # for every key, value pair in your dictionary append the pair to a list
+    for key, value in character_values:
+        sorted_list.append(key, value)
+
+    # Sort your list from largest to smallest (reverse=True)
+    sorted_list.sort(reverse=True, key=key) # The key does not work. re-read documentation and re-do the key value
+
+    return(sorted_list)
