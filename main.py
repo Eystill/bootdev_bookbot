@@ -6,7 +6,7 @@ def main():
     print("----------- Word Count ----------")
     print("Found", get_book_text_count(), "total words")
     print("--------- Character Count -------")
-    print(sorting(character_values))
+    print(sorting())
     print("============= END ===============")
 
 main()
