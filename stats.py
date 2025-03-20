@@ -248,14 +248,17 @@ def character_count():
     
     return(character_values)
 
-def sorting(character_values):
+def sorting(character_count):
+    print(character_count)
     sorted_list = []
     
     # for every key, value pair in your dictionary append the pair to a list
-    for key, value in character_values:
-        sorted_list.append(key, value)
-
+    for key, value in character_count.items():
+        sorted_list.append(key)
+        sorted_list.append(value)
+        sorter = character_count[key]
+    
     # Sort your list from largest to smallest (reverse=True)
-    sorted_list.sort(reverse=True, key=key) # The key does not work. re-read documentation and re-do the key value
+    #sorted_list.sort(reverse=True, key=value) # The key does not work. re-read documentation and re-do the key value
 
     return(sorted_list)
