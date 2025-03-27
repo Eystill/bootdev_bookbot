@@ -1,9 +1,9 @@
-def get_book_text_count():
+def get_book_text_count(book):
     text_list = []
     text = ""
 
     # While the file specified is open set the text variable to contain everything frmo the file
-    with open ('books/frankenstein.txt') as file:
+    with open (book) as file:
         text = file.read()          
 
     # split all the words of the text variable into a list of strings and set a list to contain all those strings
@@ -13,12 +13,11 @@ def get_book_text_count():
 
 character_values = {}
 
-def character_count():
-    letter_counter = 0
+def character_count(book):
     text_string = ""
 
     # While the file specified is open set the text_string variable to contain everything frmo the file
-    with open ('books/frankenstein.txt') as file:
+    with open (book) as file:
         text_string = file.read()
 
         # loop through all characters in the text. .lower() forces lowercase characters
