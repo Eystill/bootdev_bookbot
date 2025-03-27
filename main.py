@@ -3,9 +3,8 @@ import sys
 
 def main():
     try:
-        # Path of file read from sys.argv position 1.
+        # Path of file read from sys.argv position 1 and used in functions.
         book = sys.argv[1]
-        # If no book is specified by user, print guide and exit
         print("============ BOOKBOT ============")
         print(f"Analyzing book found at {book}...")
         print("----------- Word Count ----------")
@@ -19,6 +18,7 @@ def main():
             print(f"{character}: {count}")
         print("============= END ===============")
     except:
+        # If no book is specified by user, print guide and exit
         print("Incorrect usage!")
         print("To view a book report input the book you want statistics for")
         print("Example: python3 main.py books/prideandprejudice.txt")
