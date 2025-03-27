@@ -14,8 +14,6 @@ def get_book_text_count(book):
 character_values = {}
 
 def character_count(book):
-    text_string = ""
-
     # While the file specified is open set the text_string variable to contain everything frmo the file
     with open (book) as file:
         text_string = file.read()
