@@ -19,10 +19,7 @@ def main():
         print("============= END ===============")
     except:
         # If no book is specified by user, print guide and exit
-        print("Incorrect usage!")
-        print("To view a book report input the book you want statistics for")
-        print("Example: python3 main.py books/prideandprejudice.txt")
-        print("This program will now exit.")
+        print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
 
 main()
